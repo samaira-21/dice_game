@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4dc9e6, #210cae);
+}
+
+main {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    overflow: hidden;
+}
+
+.player {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 50px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.player--active {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.name {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #2d2d2d;
+}
+
+.score {
+    font-size: 80px;
+    font-weight: 300;
+    color: #133a94;
+    margin-bottom: auto;
+}
+
+.current {
+    background: #133a94;
+    border-radius: 10px;
+    padding: 25px 60px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.current-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.current-score {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 145px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateX(-50%) translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn--new {
+    top: 25px;
+}
+
+.btn--roll {
+    top: 300px;
+}
+
+.btn--hold {
+    top: 360px;
+}
